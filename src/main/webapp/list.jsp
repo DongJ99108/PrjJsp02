@@ -28,8 +28,8 @@
   ResultSet rs = pstmt.executeQuery();
   String tag = "";
   while( rs.next() ) {
-	  String userid = rs.getString("userid");
-	  String ousername = rs.getString("username");
+	  String userid = rs.getString("id"); // getSting 쪽을 테이블 칼럼이름과 똑같이 바꿔야 돌아감
+	  String ousername = rs.getString("name");
 	  String email = rs.getString("email");
 	  
 	  tag += "<li>" + userid + "," + ousername + "," + email + "<li>";
